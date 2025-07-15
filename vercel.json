@@ -1,6 +1,6 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/(.*)", "destination": "/app/shopify.server.js" }
+    { "src": "/(.*)", "dest": "/app/shopify.server.js" }
   ]
 }
