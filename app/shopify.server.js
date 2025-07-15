@@ -1,4 +1,5 @@
 import "@shopify/shopify-app-remix/adapters/node";
+import "@shopify/shopify-app-remix/adapters/vercel";
 import {
   ApiVersion,
   AppDistribution,
