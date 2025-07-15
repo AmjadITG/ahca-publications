@@ -10,11 +10,19 @@ import {
   TextField,
 } from "@shopify/polaris";
 import polarisTranslations from "@shopify/polaris/locales/en.json";
-import polarisStyles from "@shopify/polaris/build/esm/styles.css?url";
+//import polarisStyles from "@shopify/polaris/build/esm/styles.css?url";
 import { login } from "../../shopify.server";
 import { loginErrorMessage } from "./error.server";
 
-export const links = () => [{ rel: "stylesheet", href: polarisStyles }];
+//export const links = () => [{ rel: "stylesheet", href: polarisStyles }];
+
+export const links = () => [
+  {
+    rel: "stylesheet",
+    href: "https://cdn.jsdelivr.net/npm/@shopify/polaris@12.7.0/build/esm/styles.css",
+  },
+];
+
 
 export const loader = async ({ request }) => {
   const errors = loginErrorMessage(await login(request));
