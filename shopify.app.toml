@@ -1,0 +1,29 @@
+client_id = "f9519240f1981e13244f284c6b1737ef"
+name = "Ebook Management"
+handle = "ebook-management"
+application_url = "https://heard-mt-route-phase.trycloudflare.com"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-04"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+[access_scopes]
+scopes = "write_products,read_orders,customer_read_customers,customer_write_customers,unauthenticated_read_customers,read_customers"
+
+[auth]
+redirect_urls = ["https://heard-mt-route-phase.trycloudflare.com/auth/callback", "https://heard-mt-route-phase.trycloudflare.com/auth/shopify/callback", "https://heard-mt-route-phase.trycloudflare.com/api/auth/callback"]
+
+[pos]
+embedded = false
