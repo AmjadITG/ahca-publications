@@ -21,7 +21,7 @@ export default function ProductSelector({ shopify, onProductsChange }) {
       setSelectProIds(selProId);
       onProductsChange(products);
     }
-  }, [shopify, selectProIds, onProductsChange]);
+  }, [shopify, onProductsChange, selectProIds]);
 
   return (
     <Card>
