@@ -115,7 +115,6 @@ export default function IndexPage() {
     </button>
   </InlineStack>
           <IndexFilters
-             
             queryValue={queryValue}
             queryPlaceholder="Search files"
             onQueryChange={handleFiltersQueryChange}
